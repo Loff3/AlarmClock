@@ -54,7 +54,7 @@ public class AlarmPanel extends JPanel {
 
         JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         inputPanel.setPreferredSize(new Dimension(600, 50));
-        inputPanel.setBackground(Color.LIGHT_GRAY);
+        inputPanel.setBackground(Color.gray);
 
         inputPanel.add(new JLabel("Day:"));
         inputPanel.add(dayComboBox);
@@ -158,14 +158,14 @@ public class AlarmPanel extends JPanel {
             setLayout(new GridLayout(1, 3, 10, 0));
             setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
             setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
-            setBackground(Color.WHITE);
+            setBackground(Color.black);
 
             alarmLabel = new JLabel(alarm.getTime().toString());
             alarmLabel.setHorizontalAlignment(SwingConstants.CENTER);
             add(alarmLabel);
 
             activateButton = new JButton(alarm.isActive() ? "Deactivate" : "Activate");
-            activateButton.setBackground(alarm.isActive() ? Color.GREEN : Color.RED);
+            activateButton.setBackground(alarm.isActive() ? Color.green.darker().darker() : Color.RED.darker().darker());
             activateButton.setOpaque(true);
             activateButton.setBorderPainted(false);
             activateButton.addActionListener(e -> {
@@ -176,7 +176,6 @@ public class AlarmPanel extends JPanel {
             add(activateButton);
 
             removeButton = new JButton("Remove");
-            removeButton.setBackground(Color.LIGHT_GRAY);
             removeButton.setOpaque(true);
             removeButton.setBorderPainted(false);
             removeButton.addActionListener(e -> {
@@ -193,7 +192,7 @@ public class AlarmPanel extends JPanel {
 
         public void updateStatus() {
             activateButton.setText(alarm.isActive() ? "Deactivate" : "Activate");
-            activateButton.setBackground(alarm.isActive() ? Color.GREEN : Color.RED);
+            activateButton.setBackground(alarm.isActive() ? Color.green.darker().darker() : Color.RED.darker().darker());
         }
     }
 }

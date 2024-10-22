@@ -36,10 +36,10 @@ public class SetTimePanel extends JPanel {
         setTimeButton = new JButton("Set Time");
 
         setLayout(new BorderLayout());
-        setBackground(Color.black);
+
         JPanel inputPanel = new JPanel();
         inputPanel.setPreferredSize(new Dimension(400, 50));
-        inputPanel.setBackground(Color.black);
+        inputPanel.setBackground(Color.gray);
 
         inputPanel.add(dayComboBox);
         inputPanel.add(new JLabel(":"));
