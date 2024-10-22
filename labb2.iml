@@ -39,5 +39,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="flatlaf-3.5.2" level="project" />
   </component>
 </module>
